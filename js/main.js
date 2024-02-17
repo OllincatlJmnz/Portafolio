@@ -3,9 +3,11 @@ function ajustarAlturaSeccion() {
     let alturaPantalla = window.innerHeight;
     let seccionInicio = document.getElementById('Inicio');
     let seccionSobreMi = document.getElementById('SobreMi');
+    let seccionConocimientos = document.getElementById('Conocimientos');
 
     seccionInicio.style.minHeight = alturaPantalla + 'px';
     seccionSobreMi.style.minHeight = alturaPantalla + 'px';
+    seccionConocimientos.style.minHeight = alturaPantalla + 'px';
 
     console.log(alturaPantalla)
 }
