@@ -1,8 +1,12 @@
   // Función para establecer la altura de la sección igual al alto de la pantalla del navegador
 function ajustarAlturaSeccion() {
     let alturaPantalla = window.innerHeight;
-    let seccion = document.getElementById('Inicio');
-    seccion.style.minHeight = alturaPantalla + 'px';
+    let seccionInicio = document.getElementById('Inicio');
+    let seccionSobreMi = document.getElementById('SobreMi');
+
+    seccionInicio.style.minHeight = alturaPantalla + 'px';
+    seccionSobreMi.style.minHeight = alturaPantalla + 'px';
+
     console.log(alturaPantalla)
 }
 
