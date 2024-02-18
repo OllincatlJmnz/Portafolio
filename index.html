@@ -44,22 +44,22 @@
             </div>
             <div id="Menu" class="col-md-4 d-flex">
                 <div class="contenedor">
-                    <button class="card-menu sobreMi" style="--delay:-1">
+                    <button class="card-menu sobreMi" id="btnSobreMi">
                         <div class="card-body">
                             <span class="section-Name">Sobre mi</span>
                         </div>
                     </button>
-                    <button class="card-menu conocimientos" style="--delay:0">
+                    <button class="card-menu conocimientos" id="btnConocimientos">
                         <div class="card-body">
                             <span class="section-Name">Conocimientos</span>
                         </div>
                     </button>
-                    <button class="card-menu proyectos" style="--delay:1">
+                    <button class="card-menu proyectos" id="btnProyectos">
                         <div class="card-body">
                             <span class="section-Name">Proyectos</span>
                         </div>
                     </button>
-                    <button class="card-menu contacto" style="--delay:2">
+                    <button class="card-menu contacto" id="btnContacto">
                         <div class="card-body">
                             <span class="section-Name">Contacto</span>
                         </div>
@@ -193,8 +193,8 @@
                                     <img src="./src/lugares/coyoacan.jpg" class="card-img-top" alt="Portada del libro Ensayo sobre la ceguera">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Centro de Coyoacan.</h5>
-                                    <span class="cardSubTitle">CIudad de México</span>
+                                    <h5 class="card-title">Centro de Coyoacán.</h5>
+                                    <span class="cardSubTitle">Ciudad de México</span>
                                 </div>
                             </div>
                     
@@ -203,7 +203,7 @@
                                     <img src="./src/lugares/baihasHuatulco.jpg" class="card-img-top" alt="Portada del libro Ensayo sobre la ceguera">
                                 </div>
                                 <div class="card-body">
-                                    <h5 class="card-title">Baias de Huatulco.</h5>
+                                    <h5 class="card-title">Bahías de Huatulco.</h5>
                                     <span class="cardSubTitle">Oaxaca.</span>
                                 </div>
                             </div>
@@ -329,7 +329,7 @@
                             <ul>
                                 <li>Bootcamp Desarrollador Java FullStack Junior</li>
                                 <li>Diplomado en Finanzas</li>
-                                <li>Licenciatura en Matemáticas Aplicas y Computación</li>
+                                <li>Licenciatura en Matemáticas Aplicadas y Computación</li>
                             </ul>
                         </div>
                         <div class="softKills">
@@ -407,7 +407,36 @@
         </section>
 
         <section id="Contacto">
-            
+            <article class="row">
+                <h2>Contacto</h2>
+                <form action="" class="col-12 flex-row d-flex">
+                    <div class="col-12">
+                        <div class="col">
+                            <input type="text" id="txtNombre" placeholder="Nombre">
+                            <div id="alertNombre" class="contenedorAlert"></div>
+                        </div>
+                        <div class="col">
+                            <input type="tel" id="txtTelefono" placeholder="Telefono: 00 0000 0000">
+                            <div id="alertTelefono" class="contenedorAlert"></div>
+                        </div>
+                        <div class="col">
+                            <input type="email" id="txtCorreo" placeholder="Correo">
+                            <div id="alertCorreo" class="contenedorAlert"></div>
+                        </div>
+                        <div class="col">
+                            <input type="text" id="txtTema" placeholder="Tema">
+                            <div id="alertTema" class="contenedorAlert"></div>
+                        </div>
+                    </div>
+                    <div clas="col-12">
+                        <div class="col">
+                            <textarea name="" id="txtMensaje" cols="30" rows="10" placeholder="Mensaje..."></textarea>
+                            <div id="alertMensaje" class="contenedorAlert"></div>
+                        </div>
+                    </div>
+                </form>
+                <button id="btnEnviar" class="btn btnEnviar">Enviar</button>
+            </article>
         </section>
     </main>
 </body>
