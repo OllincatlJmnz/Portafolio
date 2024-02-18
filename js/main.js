@@ -160,6 +160,29 @@ btnEnviar.addEventListener("click", function(event){
   }
 
   if(isValido){
+    let asunto = txtTema.value;
+    let mensajeCorreo = `
+    <b>Nombre: </b>${txtNombre.value}<br>
+    <b>Telefono: </b>${txtTelefono.value}<br>
+    <b>Correo: </b>${txtCorreo.value}<br>
+    <b>Mensaje: </b>${txtMensaje.value}<br>
+    `
 
+    Email.send({
+      SecureToken : "db7e1343-eb60-4db5-b64c-204135d6d020",
+      To : 'ollincatlj@gmail.com',
+      From : "ollincatlj@gmail.com",
+      Subject : asunto,
+      Body : mensajeCorreo
+    }).then(
+      message => alert(message)
+    );
+
+    txtNombre.value = "";
+    txtTelefono.value = "";
+    txtCorreo.value = "";
+    txtTema.value = "";
+    txtMensaje.value = "";
+    txtNombre.focus();
   }
 })
