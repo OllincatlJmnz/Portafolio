@@ -23,6 +23,165 @@ main {
     padding-right: 10%;
 }
 
+
+/*Inicia Barra de navegacion*/
+#barNavegacion {
+    height: 100px;
+    width: 100%;
+    background-color: var(--gris);
+    border-bottom: 1px solid var(--azul);
+    box-shadow: 0 0 30px var(--azul);
+}
+
+#barNavegacion > div {
+    padding: 0 40px;
+}
+
+#barNavegacion .navbar-brand {
+    font-family: var(--fuente);
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--azul);
+}
+
+#barNavegacion div button {
+    border: none;
+    padding: 0;
+}
+
+#barNavegacion div button .menu {
+    fill: var(--azul);
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+#barNavegacion div button .menu:hover {
+    fill: var(--blanco);
+    border: 1px solid var(--azul);
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--azul);
+    background-color: var(--azul);
+    transition-duration: 1s;
+}
+
+#barNavegacion div button:focus {
+    border: none;
+}
+
+#barNavegacion div .offcanvas .offcanvas-header,
+#barNavegacion div .offcanvas .offcanvas-body{
+    background-color: var(--gris);
+}
+
+#barNavegacion div .offcanvas .offcanvas-header .offcanvas-title {
+    font-family: var(--fuente);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--azul);
+}
+
+#barNavegacion div .offcanvas .offcanvas-header .btnCerrar {
+    background-color: var(--gris);
+    border: none;
+    padding: 0;
+}
+
+#barNavegacion div .offcanvas .offcanvas-header .btnCerrar .cerrar{
+    fill: var(--azul);
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+#barNavegacion div .offcanvas .offcanvas-header .btnCerrar .cerrar:hover{
+    fill: var(--blanco);
+    border: 1px solid var(--azul);
+    border-radius: 5px;
+    box-shadow: 0 0 20px var(--azul);
+    background-color: var(--azul);
+    transition-duration: 1s;
+}
+
+#barNavegacion div .offcanvas .offcanvas-body ul li a{
+    font-family: var(--fuente);
+    font-size: 18px;
+    color: var(--blanco);
+    border: 1px solid var(--blanco);
+    border-radius: 15px;
+    width: 170px;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+#barNavegacion div .offcanvas .offcanvas-body ul li .inicio{
+    color: var(--azul);
+    border-color: var(--azul);
+}
+
+#barNavegacion div .offcanvas .offcanvas-body ul li .inicio:hover{
+    color: var(--blanco);
+    border: 1px solid var(--blanco);
+    box-shadow: 0 0 20px var(--azul);
+    background-color: var(--azul);
+    transition-duration: 1s;
+}
+
+#barNavegacion div .offcanvas .offcanvas-body ul li .sobreMi{
+    color: var(--verde-azul);
+    border-color: var(--verde-azul);
+}
+
+#barNavegacion div .offcanvas .offcanvas-body ul li .sobreMi:hover{
+    color: var(--blanco);
+    border: 1px solid var(--blanco);
+    box-shadow: 0 0 20px var(--verde-azul);
+    background-color: var(--verde-azul);
+    transition-duration: 1s;
+}
+
+#barNavegacion div .offcanvas .offcanvas-body ul li .conocimientos{
+    color: var(--verde);
+    border-color: var(--verde);
+}
+
+#barNavegacion div .offcanvas .offcanvas-body ul li .conocimientos:hover{
+    color: var(--blanco);
+    border: 1px solid var(--blanco);
+    box-shadow: 0 0 20px var(--verde);
+    background-color: var(--verde);
+    transition-duration: 1s;
+}
+
+#barNavegacion div .offcanvas .offcanvas-body ul li .proyectos{
+    color: var(--verde-claro);
+    border-color: var(--verde-claro);
+}
+
+#barNavegacion div .offcanvas .offcanvas-body ul li .proyectos:hover{
+    color: var(--blanco);
+    border: 1px solid var(--blanco);
+    box-shadow: 0 0 20px var(--verde-claro);
+    background-color: var(--verde-claro);
+    transition-duration: 1s;
+}
+
+#barNavegacion div .offcanvas .offcanvas-body ul li .contacto{
+    color: var(--naranja);
+    border-color: var(--naranja);
+}
+
+#barNavegacion div .offcanvas .offcanvas-body ul li .contacto:hover{
+    color: var(--blanco);
+    border: 1px solid var(--blanco);
+    box-shadow: 0 0 20px var(--naranja);
+    background-color: var(--naranja);
+    transition-duration: 1s;
+}
+
+/*Termina Barra de navegacion*/
+
 /*Seccion de Inicio*/
 #Inicio {
     display: flex;
@@ -529,9 +688,8 @@ main {
     box-sizing: border-box;
 
     width: 100%;
+    height: 100%;
     margin: auto;
-    margin-top: 100px;
-    padding-top: 15px;
 }
 
 #Conocimientos article h2 {
@@ -612,9 +770,8 @@ main {
     box-sizing: border-box;
 
     width: 100%;
+    height: 100%;
     margin: auto;
-    margin-top: 100px;
-    padding-top: 15px;
 }
 
 #Portafolio article h2 {
@@ -750,14 +907,13 @@ main {
 #Contacto article {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;;
+    justify-content: center;;
     align-items: center;
     box-sizing: border-box;
 
     width: 100%;
+    height: 100%;
     margin: auto;
-    margin-top: 100px;
-    padding-top: 15px;
 }
 
 #Contacto article h2 {

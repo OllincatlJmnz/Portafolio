@@ -1,23 +1,9 @@
-    // Función para establecer la altura de la sección igual al alto de la pantalla del navegador
-function ajustarAlturaSeccion() {
-    let alturaPantalla = window.innerHeight;
-    let seccionInicio = document.getElementById('Inicio');
-    let seccionSobreMi = document.getElementById('SobreMi');
-    let seccionConocimientos = document.getElementById('Conocimientos');
-    let seccionPortafolio = document.getElementById("Portafolio");
-    let seccionContacto = document.getElementById("Contacto");
-
-    seccionInicio.style.minHeight = alturaPantalla + 'px';
-    seccionSobreMi.style.minHeight = alturaPantalla + 'px';
-    seccionConocimientos.style.minHeight = alturaPantalla + 'px';
-    seccionPortafolio.style.minHeight = alturaPantalla + 'px';
-    seccionContacto.style.minHeight = alturaPantalla + 'px';
-}
-
-  // Llamar a la función cuando se carga la página y cuando se redimensiona la ventana
-window.onload = ajustarAlturaSeccion;
-window.onresize = ajustarAlturaSeccion;
-
+let alturaPantalla = window.innerHeight;
+let seccionInicio = document.getElementById('Inicio');
+let seccionSobreMi = document.getElementById('SobreMi');
+let seccionConocimientos = document.getElementById('Conocimientos');
+let seccionPortafolio = document.getElementById("Portafolio");
+let seccionContacto = document.getElementById("Contacto");
 
 let btnSobreMi = document.getElementById("btnSobreMi");
 let btnConocimientos = document.getElementById("btnConocimientos");
@@ -36,6 +22,19 @@ const expresiones = {
   texto: /^[^\/\\<>]*$/
 
 }
+// Función para establecer la altura de la sección igual al alto de la pantalla del navegador
+function ajustarAlturaSeccion() {
+    seccionInicio.style.minHeight = alturaPantalla + 'px';
+    seccionSobreMi.style.minHeight = alturaPantalla + 'px';
+    seccionConocimientos.style.minHeight = alturaPantalla + 'px';
+    seccionPortafolio.style.minHeight = alturaPantalla + 'px';
+    seccionContacto.style.minHeight = alturaPantalla + 'px';
+}
+
+  // Llamar a la función cuando se carga la página y cuando se redimensiona la ventana
+window.onload = ajustarAlturaSeccion;
+window.onresize = ajustarAlturaSeccion;
+
 
 btnSobreMi.addEventListener("click",function(event){
   rutaSeccion.href = "#SobreMi";
@@ -161,6 +160,6 @@ btnEnviar.addEventListener("click", function(event){
   }
 
   if(isValido){
-    
+
   }
 })
