@@ -4,6 +4,7 @@ let seccionSobreMi = document.getElementById('SobreMi');
 let seccionConocimientos = document.getElementById('Conocimientos');
 let seccionPortafolio = document.getElementById("Portafolio");
 let seccionContacto = document.getElementById("Contacto");
+let barNavegacion = document.getElementById("barNavegacion");
 
 let btnSobreMi = document.getElementById("btnSobreMi");
 let btnConocimientos = document.getElementById("btnConocimientos");
@@ -34,6 +35,40 @@ function ajustarAlturaSeccion() {
   // Llamar a la función cuando se carga la página y cuando se redimensiona la ventana
 window.onload = ajustarAlturaSeccion;
 window.onresize = ajustarAlturaSeccion;
+
+window.addEventListener("scroll", function(){
+  let posicion = seccionInicio.getBoundingClientRect().bottom;
+  let posicion1 = seccionSobreMi.getBoundingClientRect().top;
+  let posicion2 = seccionConocimientos.getBoundingClientRect().top;
+  let posicion3 = seccionPortafolio.getBoundingClientRect().top;
+  let posicion4 = seccionContacto.getBoundingClientRect().top;
+  if(posicion < 100 ){
+    barNavegacion.style.display ="flex";
+  } else {
+    barNavegacion.style.display ="none";
+  }
+
+  if(posicion1 > -100 && posicion1 < 100 ){
+    barNavegacion.style.borderBottom = "1px solid var(--verde-azul)";
+    barNavegacion.style.boxShadow = "0 0 30px var(--verde-azul)"
+
+  }
+  if(posicion2 > -100 && posicion2 < 100 ){
+    barNavegacion.style.borderBottom = "1px solid var(--verde)";
+    barNavegacion.style.boxShadow = "0 0 30px var(--verde)"
+
+  }
+  if(posicion3 > -100 && posicion3 < 100 ){
+    barNavegacion.style.borderBottom = "1px solid var(--verde-claro)";
+    barNavegacion.style.boxShadow = "0 0 30px var(--verde-claro)"
+
+  }
+  if(posicion4 > -100 && posicion4 < 100 ){
+    barNavegacion.style.borderBottom = "1px solid var(--naranja)";
+    barNavegacion.style.boxShadow = "0 0 30px var(--naranja)"
+
+  }
+})
 
 
 btnSobreMi.addEventListener("click",function(event){
